@@ -1,6 +1,5 @@
-package xhj.love.tyj.bean;
+package xhj.love.tyj.entity;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -9,31 +8,24 @@ import java.io.Serializable;
  * @Date 2020/7/20 19:44
  * @Version V1.0
  */
-@Entity
-@Table(name="think")
-public class Gw implements Serializable {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name="id")
-    private Integer id;
+public class Think implements Serializable {
+    private static final long serialVersionUID = 1L;
 
-    @Column(name="content")
+    private String id;
+
     private String content;
 
-    @Column(name="create_time")
     private String createTime;
 
-    @Column(name="update_time")
     private String updateTime;
 
-    @Column(name="like_num")
     private Integer likeNum;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
